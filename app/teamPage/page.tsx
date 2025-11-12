@@ -1,15 +1,31 @@
-import React from 'react'
-import SideBar from '../Components/SideBar'
+"use client"
+import {useState} from 'react'
+import Grid from '../Components/grid'
+import { employees } from '../pages'
+
 
 const LeezovaTeam = () => {
-  return (
+   const [selectedTeam, setSelectedTeam] = useState("frontend");
 
-    <div className="flex">
-          <SideBar/>
-          <div className=" h-115 w-full flex  items-center justify-center flex-col bg-pink-100 text-4xl pt-[120px] ml-[200px]">
-             WELCOME TO OUR TEAM!
+  return (
+    <div className="flex flex-col bg-pink-50 h-screen p-6 pt-[120px] w-full ">
+      <div className='w-full flex justify-between h-full  '>
+        <div className=' w-[30%] ' >
+           <h2 className="text-xl font-semibold text-center text-black mb-4">Teams</h2>
+          {employees.map((team)=>(
+            <div key={team.id}
+            onClick={()=>setSelectedTeam(team.teamName)}
+            className=" cursor-pointer justify-center items-center flex mb-4 text-lg hover:text-blue-500 hover:translate-x-2">
+              {team.teamName}
+             </div>
+          ))}
         </div>
+        <div className=' w-[70%] overflow-y-auto scrollbar-hide bg-main-gradient' >
+          <Grid selectedTeam={selectedTeam}/>
         </div>
+      </div>
+    </div>
+
   )
 }
 
