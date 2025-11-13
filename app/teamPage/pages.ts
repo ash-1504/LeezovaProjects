@@ -1,4 +1,16 @@
- export const employees = [
+type members={
+  id:string;
+  name:string;
+  details:string[];
+} 
+
+type Team={
+id:number;
+teamName:string;
+members:members[]
+}
+
+export const employees:Team[] = [
   {
     id: 1,
     teamName: "frontend",
