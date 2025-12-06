@@ -1,19 +1,7 @@
-type members={
-  id:string;
-  name:string;
-  details:string[];
-} 
-
-type Team={
-id:number;
-teamName:string;
-members:members[]
-}
-
-export const employees:Team[] = [
+const employees = [
   {
     id: 1,
-    teamName: "Frontend",
+    teamName: "frontend",
     members: [
       {
         id: "1",
@@ -53,11 +41,11 @@ export const employees:Team[] = [
       },
       {
         id: "5",
-        name: "Yukti Gupta",
+        name: "Jena Gilbert",
         details: [
           "role: Frontend Developer",
           "experience: Fresher",
-          "skills: React, CSS, HTML, cooking"
+          "skills: React, CSS, HTML"
         ]
       },
       {
@@ -74,7 +62,7 @@ export const employees:Team[] = [
 
   {
     id: 2,
-    teamName: "Backend",
+    teamName: "backend",
     members: [
       {
         id: "1",
@@ -114,7 +102,7 @@ export const employees:Team[] = [
       },
       {
         id: "5",
-        name: "Jenna Gilbert",
+        name: "Jena Gilbert",
         details: [
           "role: Backend Developer",
           "experience: Fresher",
@@ -135,7 +123,7 @@ export const employees:Team[] = [
 
   {
     id: 3,
-    teamName: "Management",
+    teamName: "management",
     members: [
       {
         id: "1",
